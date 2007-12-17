@@ -11,7 +11,6 @@ License:	GPL
 Group:		Networking/File transfer
 URL:		http://www.gftp.org/
 Requires:	gtk+2 
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	gtk+2-devel
 BuildRequires:	readline-devel
 BuildRequires:	ncurses-devel
