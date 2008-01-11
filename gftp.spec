@@ -54,19 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 %{makeinstall_std}
 
 # menu
-mkdir -p  $RPM_BUILD_ROOT%{_menudir}
 
-cat <<EOF >$RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}): \
- needs="x11" \
- section="Networking/File Transfer" \
- title="gFTP" \
- longtitle="FTP client for X Window" \
- command="%{_bindir}/%{name}" \
- icon="%{name}.png" \
- startup_notify="true" \
- xdg="true"
-EOF
 
 desktop-file-install --vendor="" \
   --remove-category="Application" \
@@ -99,7 +87,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/applications/*.desktop
 %{_datadir}/pixmaps/*
 %{_mandir}/man?/*
-%{_menudir}/%{name}
 %{_iconsdir}/*.png
 %{_miconsdir}/*.png
 %{_liconsdir}/*.png
