@@ -16,7 +16,6 @@ BuildRequires:	gtk+2-devel
 BuildRequires:	readline-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	openssl-devel
-BuildRequires:	desktop-file-utils
 
 Source0:	http://www.gftp.org/%{name}-%{version}.tar.bz2
 Source1:	%{name}.icons.tar.bz2
@@ -28,7 +27,9 @@ Patch2:         %{name}-2.0.18-fix-bookmark-crash.patch
 Patch3:         gftp-2.0.18-fix-crash-download.patch
 #(ea):	Fixes freeze at startup from FC7 rawhide
 Patch4:		gftp-2.0.18-fix-startup-freeze.patch
-
+#(nl)  CVE-2007-3961 and CVE-2007-3962
+Patch5:         gftp-2.0.18-CVE-2007-3961-CVE-2007-3962.patch
+Patch6:         gftp-2.0.18-fix-desktop-file.patch
 %description
 gFTP is a multithreaded FTP client for X Window written using Gtk. It features
 simultaneous downloads, resuming of interrupted file transfers, file transfer
@@ -44,6 +45,8 @@ stop button, and many more features.
 %patch2 -p1 -b .fix-bookmarks-crash
 %patch3 -p1 -b .fix_calculating_bug
 %patch4	-p1 -b .fix-startup-freeze
+%patch5 -p1 -b .CVE_2007_3961_CVE_2007_3962
+%patch6 -p0
 
 %build
 %configure2_5x
@@ -52,14 +55,6 @@ stop button, and many more features.
 %install
 rm -rf $RPM_BUILD_ROOT
 %{makeinstall_std}
-
-# menu
-
-
-desktop-file-install --vendor="" \
-  --remove-category="Application" \
-  --add-category="X-MandrivaLinux-Internet-FileTransfer" \
-  --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
 
 # icons
 install -D -m 644 %{name}-48.png $RPM_BUILD_ROOT%_liconsdir/%{name}.png
