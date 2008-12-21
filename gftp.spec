@@ -1,6 +1,6 @@
 %define	name	gftp
 %define version 2.0.19
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name:		%{name}
 Summary:	Multithreaded FTP client for X Windows
@@ -21,7 +21,9 @@ Source0:	http://www.gftp.org/%{name}-%{version}.tar.gz
 Source1:	%{name}.icons.tar.bz2
 Patch0:		%{name}-2.0.19-datetime-fixedsort.patch
 Patch1:		%{name}-2.0.18-bookmarks.patch
-Patch6:         gftp-2.0.19-fix-desktop-file.patch
+Patch6:     gftp-2.0.19-fix-desktop-file.patch
+patch7:     gftp-2.0.19-fix-crash.patch
+     
 %description
 gFTP is a multithreaded FTP client for X Window written using Gtk. It features
 simultaneous downloads, resuming of interrupted file transfers, file transfer
@@ -34,6 +36,7 @@ stop button, and many more features.
 %setup -q -a 1
 %patch1 -p1 -b .bookmarks
 %patch6 -p0
+%patch7 -p0
 
 %build
 %configure2_5x
