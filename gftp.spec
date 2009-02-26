@@ -1,6 +1,6 @@
 %define	name	gftp
 %define version 2.0.19
-%define release %mkrel 2
+%define release %mkrel 3
 
 Name:		%{name}
 Summary:	Multithreaded FTP client for X Windows
