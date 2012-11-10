@@ -1,0 +1,16 @@
+--- docs/gftp.desktop~	2007-01-10 02:24:50.000000000 +0100
++++ docs/gftp.desktop	2008-12-01 03:23:15.000000000 +0100
+@@ -1,4 +1,3 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Name=gFTP
+ Comment=Download and upload files using multiple file transfer protocols
+@@ -9,6 +8,6 @@
+ X-MultipleArgs=false
+ Type=Application
+-Icon=gftp.png
+-Categories=Application;Network;
++Icon=gftp
++Categories=GTK;GNOME;Network;FileTransfer;
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=gftp

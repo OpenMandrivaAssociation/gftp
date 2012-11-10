@@ -1,0 +1,14 @@
+--- lib/parse-dir-listing.c~	2008-03-04 13:14:59.000000000 +0100
++++ lib/parse-dir-listing.c	2008-12-01 03:48:29.000000000 +0100
+@@ -140,5 +140,10 @@
+           else
+             curtime.tm_year = loctime->tm_year;
+-        }
++
++	  if ( (100*curtime.tm_mon + curtime.tm_mday) >
++	       (100*loctime->tm_mon + loctime->tm_mday) )
++	    curtime.tm_year--;
++
++	}
+       else
+         tmppos = strptime (str, "%h %d %Y", &curtime);
