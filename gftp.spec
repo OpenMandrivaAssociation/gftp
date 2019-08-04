@@ -12,10 +12,10 @@ Group:		Networking/File transfer
 URL:		http://www.gftp.org/
 Requires:	gtk+2 
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	gtk+2-devel
+BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	readline-devel
-BuildRequires:	ncurses-devel
-BuildRequires:	openssl-devel
+BuildRequires:	pkgconfig(ncurses)
+BuildRequires:	pkgconfig(openssl)
 
 Source0:	http://www.gftp.org/%{name}-%{version}.tar.gz
 Source1:	%{name}.icons.tar.bz2
@@ -85,11 +85,11 @@ rm -rf $RPM_BUILD_ROOT
 + Revision: 437673
 - rebuild
 
-* Thu Feb 26 2009 Götz Waschk <waschk@mandriva.org> 1:2.0.19-3mdv2009.1
+* Thu Feb 26 2009 GÃ¶tz Waschk <waschk@mandriva.org> 1:2.0.19-3mdv2009.1
 + Revision: 345336
 - rebuild for new readline
 
-* Sun Dec 21 2008 Nicolas Lécureuil <nlecureuil@mandriva.com> 1:2.0.19-2mdv2009.1
+* Sun Dec 21 2008 Nicolas LÃ©cureuil <nlecureuil@mandriva.com> 1:2.0.19-2mdv2009.1
 + Revision: 317079
 - Fix crash at gftp start
 
@@ -105,7 +105,7 @@ rm -rf $RPM_BUILD_ROOT
   + Pixel <pixel@mandriva.com>
     - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
 
-* Wed Jan 23 2008 Nicolas Lécureuil <nlecureuil@mandriva.com> 1:2.0.18-9mdv2008.1
+* Wed Jan 23 2008 Nicolas LÃ©cureuil <nlecureuil@mandriva.com> 1:2.0.18-9mdv2008.1
 + Revision: 156948
 - Add fix for CVE-2007-3961-CVE-2007-3962
   Fix desktop file
@@ -122,20 +122,20 @@ rm -rf $RPM_BUILD_ROOT
 + Revision: 125440
 - add patch4 to fix freeze at startup
 
-* Sat Aug 12 2006 Nicolas Lécureuil <neoclust@mandriva.org> 1:2.0.18-8mdv2007.0
+* Sat Aug 12 2006 Nicolas LÃ©cureuil <neoclust@mandriva.org> 1:2.0.18-8mdv2007.0
 + Revision: 55696
 - Rebuild
 
-  + Götz Waschk <waschk@mandriva.org>
+  + GÃ¶tz Waschk <waschk@mandriva.org>
     - fix buildrequires
 
-* Fri Jul 28 2006 Nicolas Lécureuil <neoclust@mandriva.org> 1:2.0.18-7mdv2007.0
+* Fri Jul 28 2006 Nicolas LÃ©cureuil <neoclust@mandriva.org> 1:2.0.18-7mdv2007.0
 + Revision: 42305
 - Increase release 2.0.18-7mdv2007.0
 - Add patch 3: Fix crash when stopping transfert
 - Fix crash when editing bookmarks (ticket #10138)
 
-* Sat Jul 01 2006 Nicolas Lécureuil <neoclust@mandriva.org> 1:2.0.18-6mdv2007.0
+* Sat Jul 01 2006 Nicolas LÃ©cureuil <neoclust@mandriva.org> 1:2.0.18-6mdv2007.0
 + Revision: 38270
 - Increase release
 - Fix for xdg menu
@@ -151,7 +151,7 @@ rm -rf $RPM_BUILD_ROOT
 * Mon Aug 01 2005 Marcel Pol <mpol@mandriva.org> 2.0.18-3mdk
 - add Mandriva iso (devel and Official), SRPMS and Old to bookmarks
 
-* Tue Jun 21 2005 Nicolas L�cureuil <neoclust@mandriva.org> 2.0.18-2mdk
+* Tue Jun 21 2005 Nicolas Lécureuil <neoclust@mandriva.org> 2.0.18-2mdk
 - use %%debug_package
 - %%mkrel
 
@@ -164,7 +164,7 @@ rm -rf $RPM_BUILD_ROOT
 	- updated icons
 	- desktop files directory
 
-* Thu Jan 20 2005 Per �yvind Karlsen <peroyvind@linux-mandrake.com> 2.0.17-5mdk
+* Thu Jan 20 2005 Per Øyvind Karlsen <peroyvind@linux-mandrake.com> 2.0.17-5mdk
 - rebuild for new readline
 
 * Wed Oct 13 2004 Gwenole Beauchesne <gbeauchesne@mandrakesoft.com> 2.0.17-4mdk
