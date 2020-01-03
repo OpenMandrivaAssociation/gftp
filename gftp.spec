@@ -1,8 +1,8 @@
 Name:		gftp
 Summary:	Multithreaded FTP client for X Windows
 Version:	2.0.19
-Release:	7
-Epoch:		2
+Release:	8
+Epoch:		1
 License:	GPL
 Group:		Networking/File transfer
 URL:		http://www.gftp.org/
