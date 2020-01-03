@@ -39,8 +39,8 @@ stop button, and many more features.
 %patch7 -p0
 
 %build
-%configure2_5x
-%make
+%configure
+%make_build
 
 exportCC=gcc
 exportCXX=g++
