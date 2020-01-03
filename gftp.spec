@@ -42,6 +42,9 @@ stop button, and many more features.
 %configure2_5x
 %make
 
+exportCC=gcc
+exportCXX=g++
+
 %install
 rm -rf $RPM_BUILD_ROOT
 %{makeinstall_std}
