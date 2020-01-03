@@ -40,7 +40,7 @@ stop button, and many more features.
 
 %build
 %configure
-%make
+%make_build
 
 exportCC=gcc
 exportCXX=g++
