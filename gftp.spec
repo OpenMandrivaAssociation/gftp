@@ -13,7 +13,7 @@ BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	pkgconfig(openssl)
 
-Source0:	http://www.gftp.org/%{name}-%{version}.tar.xz
+Source0:	http://www.gftp.org/%{name}-%{version}.tar.gz
 Source1:	%{name}.icons.tar.bz2
 Patch0:		%{name}-2.0.19-datetime-fixedsort.patch
 Patch1:		%{name}-2.0.18-bookmarks.patch
