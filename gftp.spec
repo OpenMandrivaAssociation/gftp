@@ -1,7 +1,7 @@
 Name:		gftp
 Summary:	Multithreaded FTP client for X Windows
-Version:	2.0.19
-Release:	8
+Version:	2.7.0
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		Networking/File transfer
@@ -13,7 +13,7 @@ BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	pkgconfig(openssl)
 
-Source0:	http://www.gftp.org/%{name}-%{version}.tar.gz
+Source0:	http://www.gftp.org/%{name}-%{version}.tar.xz
 Source1:	%{name}.icons.tar.bz2
 Patch0:		%{name}-2.0.19-datetime-fixedsort.patch
 Patch1:		%{name}-2.0.18-bookmarks.patch
