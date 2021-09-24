@@ -13,12 +13,12 @@ BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	pkgconfig(openssl)
 
-Source0:	http://www.gftp.org/%{name}-%{version}.tar.gz
+Source0:	https://github.com/masneyb/%{name}-%{version}.tar.gz
 # Source1:	%{name}.icons.tar.bz2
-# Patch0:		%{name}-2.0.19-datetime-fixedsort.patch
-# Patch1:		%{name}-2.0.18-bookmarks.patch
-# Patch6:     gftp-2.0.19-fix-desktop-file.patch
-# patch7:     gftp-2.0.19-fix-crash.patch
+Patch0:		%{name}-2.0.19-datetime-fixedsort.patch
+Patch1:		%{name}-2.0.18-bookmarks.patch
+Patch6:     gftp-2.0.19-fix-desktop-file.patch
+patch7:     gftp-2.0.19-fix-crash.patch
 Patch8:	    gftp-stropts.patch
      
 %description
@@ -31,9 +31,9 @@ stop button, and many more features.
 
 %prep
 %setup -q -a 1
-# %patch1 -p1 -b .bookmarks
-# %patch6 -p0
-# %patch7 -p0
+%patch1 -p1 -b .bookmarks
+%patch6 -p0
+%patch7 -p0
 %patch8 -p1
 
 %build
