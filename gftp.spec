@@ -13,8 +13,8 @@ BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	pkgconfig(openssl)
 
-Source0:	https://github.com/masneyb/%{name}-%{version}.tar.gz
-# Source1:	%{name}.icons.tar.bz2
+Source0:	http://www.gftp.org/%{name}-%{version}.tar.gz
+Source1:	%{name}.icons.tar.bz2
 Patch0:		%{name}-2.0.19-datetime-fixedsort.patch
 Patch1:		%{name}-2.0.18-bookmarks.patch
 Patch6:     gftp-2.0.19-fix-desktop-file.patch
@@ -168,4 +168,3 @@ rm -rf $RPM_BUILD_ROOT
 - new release
 - drop patch 2 (merged upstream)
 - redo patch 3
-
