@@ -1,19 +1,17 @@
 Name:		gftp
 Summary:	Multithreaded FTP client for X Windows
-Version:	2.7.0b
+Version:	2.9.1b
 Release:	1
-Epoch:		1
 License:	GPL
 Group:		Networking/File transfer
-URL:		http://www.gftp.org/
+URL:		https://www.gftp.org/
 Requires:	gtk+2 
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	pkgconfig(openssl)
-
-Source0:	http://www.gftp.org/%{name}-%{version}.tar.gz
+Source0:	https://github.com/masneyb/gftp/releases/download/%{version}/gftp-%{version}.tar.xz
 # Source1:	%{name}.icons.tar.bz2
 Patch0:		%{name}-2.0.19-datetime-fixedsort.patch
 Patch1:		%{name}-2.0.18-bookmarks.patch
@@ -31,10 +29,10 @@ stop button, and many more features.
 
 %prep
 %setup -q -a 1
-%patch1 -p1 -b .bookmarks
-%patch6 -p0
-%patch7 -p0
-%patch8 -p1
+%patch 1 -p1 -b .bookmarks
+%patch 6 -p0
+%patch 7 -p0
+%patch 8 -p1
 
 %build
 %configure
