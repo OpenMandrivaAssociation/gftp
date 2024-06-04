@@ -13,11 +13,11 @@ BuildRequires:	pkgconfig(ncurses)
 BuildRequires:	pkgconfig(openssl)
 Source0:	https://github.com/masneyb/gftp/releases/download/%{version}/gftp-%{version}.tar.xz
 # Source1:	%{name}.icons.tar.bz2
-Patch0:		%{name}-2.0.19-datetime-fixedsort.patch
+#Patch0:		%{name}-2.0.19-datetime-fixedsort.patch
 #Patch1:		%{name}-2.0.18-bookmarks.patch
 #Patch6:     gftp-2.0.19-fix-desktop-file.patch
 #patch7:     gftp-2.0.19-fix-crash.patch
-Patch8:	    gftp-stropts.patch
+#Patch8:	    gftp-stropts.patch
      
 %description
 gFTP is a multithreaded FTP client for X Window written using Gtk. It features
@@ -32,7 +32,7 @@ stop button, and many more features.
 #patch 1 -p1 -b .bookmarks
 #patch 6 -p0
 #patch 7 -p0
-%patch 8 -p1
+#patch 8 -p1
 
 %build
 %configure
