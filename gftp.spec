@@ -29,9 +29,9 @@ stop button, and many more features.
 
 %prep
 %setup -q -a 1
-%patch 1 -p1 -b .bookmarks
-%patch 6 -p0
-%patch 7 -p0
+#patch 1 -p1 -b .bookmarks
+#patch 6 -p0
+#patch 7 -p0
 %patch 8 -p1
 
 %build
