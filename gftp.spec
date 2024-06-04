@@ -35,6 +35,7 @@ stop button, and many more features.
 #patch 8 -p1
 
 %build
+./autogen.sh
 %configure
 %make_build
 
