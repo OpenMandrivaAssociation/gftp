@@ -7,6 +7,11 @@ Group:		Networking/File transfer
 URL:		https://www.gftp.org/
 Requires:	gtk+2 
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(ncurses)
